@@ -29,7 +29,7 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    public ResponseTemplateVO getUserWithDepartment(@PathVariable Long userId) {
+    public ResponseTemplateVO getUserWithDepartment(@PathVariable("id") Long userId) {
         log.info("Inside getUserWithDepartment of UserController");
         return userService.getUserWithDepartment(userId);
 
